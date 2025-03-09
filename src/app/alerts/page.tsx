@@ -1,18 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
   AlertTriangle,
   Shield,
-  Activity,
   Clock,
-  Target,
-  Zap,
-  BarChart,
-  Radio,
   MapPin,
   Server,
 } from "lucide-react";
@@ -62,8 +56,6 @@ const threatMetrics = [
 ];
 
 export default function AlertsPage() {
-  const [selectedAlert, setSelectedAlert] = useState<string | null>(null);
-
   return (
     <div className="relative min-h-screen p-8 space-y-8">
       <div className="flex items-center justify-between">

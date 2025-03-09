@@ -9,30 +9,22 @@ import { AnimatedCard } from "@/components/ui/animated-card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import Image from "next/image";
 import {
-  User,
   Shield,
   MapPin,
   Activity,
   Clock,
-  CheckCircle2,
-  XCircle,
   Target,
   BarChart3,
   Globe,
   Mail,
   Phone,
-  Award,
-  Briefcase,
   Crosshair,
   Radio,
   Wifi,
   Radar,
   Satellite,
-  Cpu,
-  Bomb,
   Swords,
   Plane,
-  Ship,
   Loader2,
 } from "lucide-react";
 
