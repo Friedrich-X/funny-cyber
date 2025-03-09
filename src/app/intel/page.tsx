@@ -1,25 +1,14 @@
 "use client";
 
-import { useState } from "react";
-import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
-  FileText,
   Lock,
-  Eye,
-  Calendar,
-  AlertTriangle,
-  Search,
-  Fingerprint,
-  Network,
   Clock,
   Tag,
-  Link2,
   Activity,
   Users,
 } from "lucide-react";
-import { Progress } from "@/components/ui/progress";
 import { AnimatedCard } from "@/components/ui/animated-card";
 
 const documents = [
@@ -83,8 +72,6 @@ const recentActivity = [
 ];
 
 export default function IntelPage() {
-  const [selectedDoc, setSelectedDoc] = useState<string | null>(null);
-
   return (
     <div className="relative min-h-screen p-8 space-y-8">
       <div className="flex items-center justify-between">

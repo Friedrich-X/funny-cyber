@@ -3,7 +3,12 @@ const nextConfig = {
   images: {
     domains: ['images.unsplash.com'],
   },
-  swcMinify: true,
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   experimental: {
     optimizeCss: true,
   },

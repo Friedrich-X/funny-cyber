@@ -12,7 +12,6 @@ import {
   Settings,
   Bell,
   Shield,
-  Eye,
   Radio,
   Monitor,
   Wifi,

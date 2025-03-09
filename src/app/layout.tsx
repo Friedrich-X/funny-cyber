@@ -1,11 +1,9 @@
-import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { Sidebar } from "@/components/ui/sidebar";
 import "./globals.css";
 import { ClientLayout } from "@/components/client-layout";
 import { metadata } from "./metadata";
 
-const fontSans = GeistSans;
 const fontMono = GeistMono;
 
 export { metadata };

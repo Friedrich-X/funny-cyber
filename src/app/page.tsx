@@ -1,13 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { Card } from "@/components/ui/card";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
-import { Shield, AlertTriangle, Terminal, Lock, Wifi, Fingerprint, Eye, Radio, Target, Activity, BarChart3, Users, Zap } from "lucide-react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Shield, AlertTriangle, Activity, BarChart3, Users, Zap } from "lucide-react";
 import { AnimatedCard } from "@/components/ui/animated-card";
 
 const stats = [
@@ -42,10 +39,6 @@ const securityMetrics = [
 
 export default function Home() {
   const [progress, setProgress] = useState(0);
-  const [showWarning, setShowWarning] = useState(false);
-  const [threatLevel, setThreatLevel] = useState(0);
-  const [accessCode, setAccessCode] = useState("****");
-  const [selectedAgent, setSelectedAgent] = useState<string | null>(null);
 
   useEffect(() => {
     // Simulate system scan progress
@@ -53,31 +46,10 @@ export default function Home() {
       setProgress((prev) => (prev >= 100 ? 0 : prev + 1));
     }, 50);
 
-    // Simulate random threat detection
-    const threatTimer = setInterval(() => {
-      setThreatLevel(Math.floor(Math.random() * 100));
-      if (Math.random() > 0.7) {
-        setShowWarning(true);
-        setTimeout(() => setShowWarning(false), 3000);
-      }
-    }, 5000);
-
     return () => {
       clearInterval(timer);
-      clearInterval(threatTimer);
     };
   }, []);
-
-  const generateAccessCode = () => {
-    const code = Math.random().toString(36).substring(2, 6).toUpperCase();
-    setAccessCode(code);
-  };
-
-  const agents = [
-    { id: "007", name: "James Bond", status: "Active" },
-    { id: "006", name: "Alec Trevelyan", status: "MIA" },
-    { id: "008", name: "Bill", status: "On Mission" },
-  ];
 
   return (
     <div className="relative min-h-screen p-8 space-y-8">
